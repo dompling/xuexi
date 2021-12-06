@@ -1,296 +1,236 @@
-<html lang="en" style="font-size: 22.5px;"><head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="format-detection" content="telephone=no">
-  <meta name="description" content="学习强国">
-  <meta name="keywords" content="学习强国">
-  <title>学习强国</title>
-  <link rel="icon" id="favicon" href="https://gw.alicdn.com/tfs/TB1ReAlvxnaK1RjSZFtXXbC2VXa-32-32.png" type="image/x-icon">
-  <style>
-  html, body, h1, div, p, img {
-    margin: 0;
-    padding: 0;
-  }
+<html lang="en" style="font-size: 22.5px">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="xuexiRedirect" />
+    <meta name="keywords" content="xuexiRedirect" />
+    <title>XueXiRedirect</title>
+    <link
+      rel="icon"
+      id="favicon"
+      href="https://gw.alicdn.com/tfs/TB1ReAlvxnaK1RjSZFtXXbC2VXa-32-32.png"
+      type="image/x-icon"
+    />
+    <style>
+      html,
+      body,
+      h1,
+      div,
+      p,
+      img {
+        margin: 0;
+        padding: 0;
+      }
 
-  html, body {
-    height: 100%;
-    overflow: hidden;
-    background: #ffffff;
-  }
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+        background: #ffffff;
+      }
 
-  body {
-    padding-top: 80px;
-    box-sizing: border-box;
-  }
+      body {
+        padding-top: 80px;
+        box-sizing: border-box;
+      }
 
-  #root {
-    text-align: center;
-    background-image: url('https://img.alicdn.com/tfs/TB1C8dqH1OSBuNjy0FdXXbDnVXa-1484-736.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding-top: 80px;
-    background-position: center;
-  }
+      #root {
+        text-align: center;
+        background-image: url('https://img.alicdn.com/tfs/TB1C8dqH1OSBuNjy0FdXXbDnVXa-1484-736.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-top: 80px;
+        background-position: center;
+      }
 
-  .button-wrapper {
-    padding-top: 15px;
-  }
+      .button-wrapper {
+        padding-top: 15px;
+      }
 
-  .layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .7);
-  }
+      .layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
 
-  .layer img {
-    width: 100%;
-  }
+      .layer img {
+        width: 100%;
+      }
 
-  .line {
-    width: 42px;
-    height: 2px;
-    background-color: #F25643;
-    margin: 0 auto;
-    margin-bottom: 24px;
-  }
+      .line {
+        width: 42px;
+        height: 2px;
+        background-color: #f25643;
+        margin: 0 auto;
+        margin-bottom: 24px;
+      }
 
-  .download-button {
-    background: #3296FA;
-    width: 188px;
-    height: 48px;
-    line-height: 48px;
-    color: #ffffff;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    border-radius: 5px;
-    font-size: 16px;
-  }
+      .download-button {
+        background: #3296fa;
+        width: 188px;
+        height: 48px;
+        line-height: 48px;
+        color: #ffffff;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 16px;
+      }
 
-  .title {
-    color: #191F25;
-    font-size: 24px;
-    padding-top: 10px;
-  }
+      .title {
+        color: #191f25;
+        font-size: 24px;
+        padding-top: 10px;
+      }
 
-  .description {
-    color: #191F25;
-    font-size: 0.65rem;;
-    padding: 5px 0;
-  }
+      .description {
+        color: #191f25;
+        font-size: 0.65rem;
+        padding: 5px 0;
+      }
 
-  .logo {
-    position: relative;
-  }
+      .logo {
+        position: relative;
+      }
 
-  .logo .circle {
-    position: absolute;
-    border-radius: 50%;
-    left: 50%;
-  }
+      .logo .circle {
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+      }
 
-  .logo .circle.circle1 {
-    width: 5px;
-    height: 5px;
-    background-color: #00BBFF;
-    margin-left: -160px;
-    top: -85px;
-  }
+      .logo .circle.circle1 {
+        width: 5px;
+        height: 5px;
+        background-color: #00bbff;
+        margin-left: -160px;
+        top: -85px;
+      }
 
-  .logo .circle.circle2 {
-    background-color: #3296FA;
-    width: 15px;
-    height: 15px;
-    margin-left: -145px;
-    top: 85px;
-  }
+      .logo .circle.circle2 {
+        background-color: #3296fa;
+        width: 15px;
+        height: 15px;
+        margin-left: -145px;
+        top: 85px;
+      }
 
-  .logo .circle.circle3 {
-    background-color: #FF943E;
-    width: 8px;
-    height: 8px;
-    margin-left: 37px;
-    top: -85px;
-  }
+      .logo .circle.circle3 {
+        background-color: #ff943e;
+        width: 8px;
+        height: 8px;
+        margin-left: 37px;
+        top: -85px;
+      }
 
-  .logo .circle.circle4 {
-    background-color: #FF623B;
-    width: 18px;
-    height: 18px;
-    margin-left: 150px;
-    top: -40px;
-  }
+      .logo .circle.circle4 {
+        background-color: #ff623b;
+        width: 18px;
+        height: 18px;
+        margin-left: 150px;
+        top: -40px;
+      }
 
-  .logo img {
-    width: 100px;
-  }
+      .logo img {
+        width: 100px;
+      }
 
-  .copyright {
-    padding-top: 10px;
-    color: #191F25;
-  }
+      .copyright {
+        padding-top: 10px;
+        color: #191f25;
+      }
 
-  .copyright p{
-    font-size: 11px;
-    line-height: 22px;
-  }
+      .copyright p {
+        font-size: 11px;
+        line-height: 22px;
+      }
 
-  /*
+      /*
    * iPhone 4/4s landscape & portrait
    */
-  @media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 480px)
-  and (-webkit-device-pixel-ratio: 2)
-  and (device-aspect-ratio: 2/3) {
-    body {
-      padding-top: 10px;
-    }
-  }
-  </style>
-  <script>
-      !function() {
-          function a() {
-            var w=window.innerWidth
-            || document.documentElement.clientWidth
-            || document.body.clientWidth;
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+        body {
+          padding-top: 10px;
+        }
+      }
+    </style>
+    <script>
+      !(function () {
+        function a() {
+          var w =
+            window.innerWidth ||
+            document.documentElement.clientWidth ||
+            document.body.clientWidth;
 
-            var h=window.innerHeight
-            || document.documentElement.clientHeight
-            || document.body.clientHeight;
-            document.documentElement.style.fontSize = Math.min(w, h) / 16 + "px";
-          }
-          var b = null;
-          window.addEventListener("resize", function() {
-              clearTimeout(b), b = setTimeout(a, 300)
-          }, !1), a();
-      }(window);
-  </script>
-</head>
-<body>
-  <div id="root">
-    <div class="logo">
-      <img src="https://gw.alicdn.com/tfs/TB1YXg4skzoK1RjSZFlXXai4VXa-140-140.png">
-      <div class="circle circle1"></div>
-      <div class="circle circle2"></div>
-      <div class="circle circle3"></div>
-      <div class="circle circle4"></div>
+          var h =
+            window.innerHeight ||
+            document.documentElement.clientHeight ||
+            document.body.clientHeight;
+          document.documentElement.style.fontSize = Math.min(w, h) / 16 + 'px';
+        }
+        var b = null;
+        window.addEventListener(
+          'resize',
+          function () {
+            clearTimeout(b), (b = setTimeout(a, 300));
+          },
+          !1,
+        ),
+          a();
+      })(window);
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="logo">
+        <img
+          src="https://gw.alicdn.com/tfs/TB1YXg4skzoK1RjSZFlXXai4VXa-140-140.png"
+        />
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+      </div>
+      <h1 class="title">Learn Strong Country</h1>
+      <div class="description">Dreams starting from learning from practice</div>
+      <div class="button-wrapper">
+        <div class="line"></div>
+        <a href="javascript:;" class="download-button" id="loginLink">
+          LoginRedirect
+        </a>
+      </div>
     </div>
-    <h1 class="title">学习强国</h1>
-    <div class="description">梦想从学习开始 事业从实践起步</div>
-    <div class="button-wrapper">
-      <div class="line"></div>
-      <a href="javascript:;" class="download-button" id="downloadLink">点击下载手机客户端</a>
-    </div>
-  </div>
-  <script>
-      window.__mainJsLoadOnerror = function(src) {
-        throw new Error('load error: ' + src.getAttribute('src'))
-      }
-      window.__WPO = {
-        config: {
-          sample: 1,
-          spmId: 'y.h5.download',
-          disabled: window.location.host.indexOf('test') > -1,
-          startTime: new Date().getTime(),
-          errMsgFilter: /(WeixinJSBridge\sis\snot\sdefined|Can't\sfind\svariable:\sWeixinJSBridge|x5onSkinSwitch\sis\snot\sdefined|Can't\sfind\svariable:\s_WXJS|qb_bridge.fireEvent\sis\snot\sa\sfunction|vivoNewsDetailPage.getNewsReadStatus4Vivo\sis\snot\sa\sfunction|ToutiaoJSBridge\sis\snot\sdefined|TouTiao\sis\snot\sdefined)/,
-        }
-      }
-  </script>
-  <script crossorigin="" src="https://g.alicdn.com/retcode/log/log.js"></script>
-  <script>
-  function getParam(key) {
-    var param = {};
-    var search = window.location.search.replace('?', '');
-    var query = search.split('&');
-    query.forEach(function(value){
-      var temp = value.split('=');
-      if (temp[0]) {
-        param[temp[0]] = decodeURIComponent(temp[1] || '');
-      }
-    });
-    return key ? param[key] : param;
-  }
-  var u = navigator.userAgent;
-  var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-  var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-  var isWeixin = u.toLowerCase().indexOf('micromessenger') > -1;
-  var encodeUrl = getParam('encodeUrl');
-  var xxfrom = getParam('xxfrom');
-  (function() {
-    var downloadLink = document.getElementById('downloadLink');
-
-    window.onload = function() {
-      if (isiOS) {
-        __WPO && __WPO.custom('count', 'ios');
-      } else if (isAndroid) {
-        __WPO && __WPO.custom('count', 'android');
-      } else {
-        __WPO && __WPO.custom('count', 'pc');
-      }
-      if (xxfrom && xxfrom == 'xuexi'){
-        __WPO && __WPO.custom('count', xxfrom);
-      } 
-      if (encodeUrl) {
-        __WPO && __WPO.custom('count', 'dtxuexi');
-      }
-    }
-    if (downloadLink) {
-      var fn = function() {
-        var client = 'https://partyoa.xuexi.cn/app/download?app=xuexi&client=';
-        if (isiOS) {
-          __WPO && __WPO.custom('count', '↓ios');
-          window.location.href = client + 'ios';
-        } else {
-          __WPO && __WPO.custom('count', '↓android');
-          if (isWeixin) {
-            var div = document.createElement('div');
-            div.className = 'layer';
-            div.innerHTML = '<img src="https://gw.alicdn.com/tfs/TB1oQ0nyxjaK1RjSZKzXXXVwXXa-750-445.png"/>';
-            document.getElementById('root').appendChild(div);
-          } else {
-            window.location.href = client + 'android';
+    <script>
+      function getParam(key) {
+        var param = {};
+        var search = window.location.search.replace('?', '');
+        var query = search.split('&');
+        query.forEach(function (value) {
+          var temp = value.split('=');
+          if (temp[0]) {
+            param[temp[0]] = decodeURIComponent(temp[1] || '');
           }
-        }
+        });
+        return key ? param[key] : param;
       }
-      if (downloadLink.addEventListener) {
-        downloadLink.addEventListener('click', fn, false);
-      } else if (downloadLink.attachEvent){
-        downloadLink.attachEvent('onclick', fn);
-      } else {
-        downloadLink['onclick'] = fn;
-      }
-    }
-  })();
-  </script>
-  <script>
-    if (encodeUrl) {
-      (function() {
-        try{
-          if (!!u.match(/iphone|ipod/ig)) {
-            window.location.href = 'dtxuexi://appclient/page/study_feeds?url=' + encodeURIComponent(encodeUrl);
-          } else {
-            var iframe = document.createElement('iframe');
-            iframe.src = 'dtxuexi://appclient/page/study_feeds?url=' + encodeURIComponent(encodeUrl); // URL scheme的方式跳转
-            iframe.style.display = 'none';
-            iframe.style.width = '0';
-            iframe.style.height = '0';
-            iframe.style.border = 'none';
-            document.body.appendChild(iframe);
-          }
-        } catch (e) {
-          console.log(e);
-        }
-      })();
-    }
-  </script>
-
-
-</body></html>
+      const uri = decodeURIComponent(getParam('uri') || '');
+      const loginBtn = document.getElementById('loginLink');
+      loginBtn.setAttribute(
+        'href',
+        `dtxuexi://appclient/page/study_feeds?url=${encodeURIComponent(uri)}`,
+      );
+    </script>
+  </body>
+</html>
